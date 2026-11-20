@@ -14,7 +14,7 @@ interface ScryfallCard {
     };
     image_uris?: {
       normal: string;
-    };
+     };
   }
 
 interface CardProps {
