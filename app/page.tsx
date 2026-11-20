@@ -41,12 +41,6 @@ async function getCard(name: string): Promise<ScryfallCard> {
 
 const card = await getCard("scute swarm");
 
-console.log(card.name);
-console.log(card.mana_cost);
-
-console.log(card.prices.usd);
-
-
 export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">

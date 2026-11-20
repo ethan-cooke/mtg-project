@@ -24,14 +24,17 @@ interface CardProps {
 export default function Card({card}: CardProps) {
     return(
         
-        <div>
-            <div>name: {card.name}</div>
-            <div>mana cost: {card.mana_cost}</div>
-            <div>price: {card.prices.usd}</div>
-            <div>effect: {card.oracle_text}</div>
+        <div className="flex items-center p-4 justify-center bg-slate-700 rounded-xl font-sans">
+            
             {card.image_uris?.normal && (
-                <img src={card.image_uris.normal} alt={card.name} />
+                <img src={card.image_uris.normal} alt={card.name} className="max-w-64 w-auto object-cover rounded-xl" />
             )}
+            <div className="flex flex-col justify-between p-4 text-white">
+                <div>name: {card.name}</div>
+                <div>mana cost: {card.mana_cost}</div>
+                <div>price: {card.prices.usd}</div>
+                <div>effect: {card.oracle_text}</div>
+            </div>
         </div>
     )
 }
